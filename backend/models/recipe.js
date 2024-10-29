@@ -1,12 +1,12 @@
 import mongoose from 'mongoose';
 
-const bookSchema = new mongoose.Schema({
-    title: {
+const recipeSchema = new mongoose.Schema({
+    image: {
         type: String,
         required: true
-    },
-
-    author: {
+    }, 
+    
+    title: {
         type: String,
         required: true
     },
@@ -16,11 +16,16 @@ const bookSchema = new mongoose.Schema({
         required: true
     },
 
-    image: {
+    ingredients: {
+        type: String,
+        required: true
+    },
+
+    description: {
         type: String,
         required: true
     }
 });
 
-const Book = mongoose.model('Book', bookSchema);
-export default Book;
+const Recipe = mongoose.model('Recipe', recipeSchema);
+export default Recipe;
